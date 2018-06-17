@@ -5,6 +5,7 @@ body{
 	font-size:24px ;
 }
 a{
+	color: #d8c8c8;
 	text-decoration: none;
 }
 p{
@@ -124,6 +125,7 @@ p{
 #specialization {
 	display: flex;
 	margin-top: 40px;
+	margin-bottom: 40px;
 }
 #spec-left-pane {
 	width: 30%;
@@ -134,8 +136,8 @@ p{
 }
 #spec-left-pane p span{
 	color: maroon;
-    display: inline-block;
-    border-bottom: 3px solid maroon;
+	display: inline-block;
+	border-bottom: 3px solid maroon;
 }
 #spec-right-pane {
 	height: 100%;
@@ -173,12 +175,107 @@ p{
 	justify-content: center;
 }
 
-#parallax{
-	width: 100%;
-	height: 400px;
-	background-image: url(../Images/parallax.jpg);
+#projects{
+	background-image: url(../Images/projects.jpg);
 	background-attachment: fixed;
 	background-size: cover;
+	padding: 50px;
+
+}
+
+#proj-title{
+	color: white;
+	filter: drop-shadow(0px 10px 5px black) ;
+	font-size: 50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+#boxes{
+	font-size: 2.5vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+#proj-1{
+	background-image: url(../Images/scrabble.jpg);
+	margin: 20px;
+	width: 40vh;
+	height: 40vh;
+	background-color: black;
+	border: 3px solid ghostwhite;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	transition: background-image 0.7s;
+
+}
+
+#proj-1:hover{
+	background-image: url(../Images/scrabble-blur.jpg);
+}
+#proj-1:hover .pro-desc{
+	color: white;
+}
+#proj-1:hover .pro-name{
+	color: yellow;
+	filter: drop-shadow(0px 10px 5px black) ;
+}
+#proj-1:hover .view a{
+	color: white;
+	background-color: #008000bf;
+	border: 2px solid white;
+}
+
+
+.pro-box{
+	margin: 20px;
+	width: 40vh;
+	height: 40vh;
+	background-color: black;
+	border: 3px solid ghostwhite;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+}
+.pro-name{
+	font-size: 4vh;
+	color: transparent;
+	padding: 5px;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	height: 15%;
+	transition: color 0.5s;
+}
+.pro-desc{
+	color: transparent;
+	padding: 5px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	height: 55%;
+	transition: color 0.5s;
+}
+.view{
+	height: 30%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.view a{
+	color: transparent;
+	height: 50%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: color 0.5s,background-color 0.5s,border-color 0.5s;
+	border: 2px solid transparent;
+
 }
 
 #footer{
@@ -187,6 +284,20 @@ p{
 	background-image: url(../Images/footer.jpg);
 	background-size: cover;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 800px) {
 	body{
 		font-size: 14px;
@@ -272,4 +383,22 @@ p{
 	.p-bar-parent{
 		text-align: center;
 	}
+
+	#proj-1{
+		background-image: url(../Images/scrabble-blur.jpg);
+	}
+
+	.pro-desc{
+		color: white;
+	}
+	.pro-name{
+		color: yellow;
+		filter: drop-shadow(0px 10px 5px black) ;
+	}
+	.view a{
+		color: white;
+		background-color: #008000bf;
+		border: 2px solid white;
+	}
+
 }
