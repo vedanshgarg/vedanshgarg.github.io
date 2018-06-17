@@ -106,7 +106,6 @@ p{
 	display: inline-block;
 	padding: 1%;
 	width: 15%;
-	/*margin: 1%;*/
 }
 #contact-icons li img{
 	width: 50px;
@@ -382,6 +381,14 @@ p{
 	}
 	.p-bar-parent{
 		text-align: center;
+	}
+
+	#projects{
+		padding: 0px;
+	}
+	#proj-title{
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 
 	#proj-1{
