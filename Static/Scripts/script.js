@@ -16,19 +16,36 @@ var j=0;
  		var dist=document.querySelector(getId);
 		Ydist=dist.getBoundingClientRect().y;
  		console.log(Ydist);
- 		var y=scrollY;
- 		var x=scrollY;
- 		var i=0;
 
- 		// while(y<Ydist){
- 		// 	setTimeout(function(){
- 		// 		x+=15;
- 		// 		scrollTo(0,x);
- 		// 	},i*5);
- 		// 	y+=15;
- 		// 	i+=1;
- 		// }
 
+
+ 	// 	var y=scrollY;
+ 	// 	var x=scrollY;
+ 	// 	var i=0;
+		// while(y<Ydist){
+ 	// 		setTimeout(function(){
+ 	// 			x+=15;
+ 	// 			scrollTo(0,x);
+ 	// 		},i*5);
+ 	// 		y+=15;
+ 	// 		i+=1;
+ 	// 	}
+
+
+
+
+ 		// y=setInterval(function(){
+ 		// 	if(scrollY>Ydist){
+ 		// 		clearTimeout(y);
+ 		// 	}
+ 		// 	if ((window.innerHeight + window.scrollY + 20) >= document.body.offsetHeight) {
+   //      		clearTimeout(y);
+   //  		}
+ 		// 	scrollTo(0,scrollY+15);
+ 		// },1);
+
+
+ 		var initial =scrollY;
  		y=setInterval(function(){
  			if(scrollY>Ydist){
  				clearTimeout(y);
@@ -36,10 +53,22 @@ var j=0;
  			if ((window.innerHeight + window.scrollY + 20) >= document.body.offsetHeight) {
         		clearTimeout(y);
     		}
- 			scrollTo(0,scrollY+15);
+ 			scrollTo(0,ScrollInt(initial,Ydist));
  		},1);
  		
 
  	}
+
+ }
+ function ScrollInt(s,e){
+ 	var add=((scrollY-s)*(e-scrollY)*(4))/((e-s)*(e-s));
+ 	squr=add;
+ 	if(squr*20<1){
+ 		return scrollY+1;
+ 	}else{
+ 		return scrollY+squr*20;
+ 	}
+
+ 	
 
  }
